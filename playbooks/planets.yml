@@ -1,0 +1,5 @@
+---
+- name: Create planet list
+  hosts: localhost
+  roles:
+    - planets

@@ -1,0 +1,5 @@
+---
+- name: Create list of interesting planets
+  copy:
+    content: "{{ interesting_planets | to_nice_json }}"
+    dest: "/tmp/planets.json"

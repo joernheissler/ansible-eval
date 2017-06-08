@@ -1,0 +1,10 @@
+---
+interesting_type: gas
+interesting_planets: >
+  {{ "[
+    {'name': k, 'diameter': v['diameter'], 'mass': v['mass']}
+    for k, v in sorted(hosts.iteritems())
+    if v.get('type', None) == planettype
+    ]" | eval(hosts=hostvars, planettype=interesting_type)
+  }}
+
